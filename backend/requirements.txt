@@ -1,0 +1,9 @@
+# Pinned to the TypeSafe SDK; other deps use floors so pip can pick wheels that
+# match the local Python (e.g. Python 3.14, where some pinned builds have no
+# prebuilt wheel). pydantic is left unpinned so the wheel the SDK already needs
+# is reused instead of forcing a source build.
+typesafe-sdk==0.7.2
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.10
+# httpx is NOT required: the Ollama probe uses stdlib urllib, and the SDK ships httpx2.

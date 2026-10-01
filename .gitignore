@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local mutable data (seeded automatically on first run)
+data/sessions/*.json
+data/config/*.json
+
+# Keep the data directories tracked
+!data/sessions/.gitkeep
+!data/config/.gitkeep
+
+# Editor / OS
+.DS_Store
+.vscode/
